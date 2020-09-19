@@ -1,69 +1,92 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body {
+  font-family: 'Space Mono', cursive;
+  color: #dfd9d9;
+  line-height: 1.7;
+  font-size: 19px;
+  background: #f3904f; /* fallback for old browsers */
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/papyrus-dark.png") ;
+}
+
+
+
+.link {
+  color: #efefef;
+  display: inline-block;
+  padding: 3px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+
+.link:hover {
+  color: #f59494;
+  transform: scale(1.1);
+}
+
+/_ nasa photo ---------- _/
+
+.nasa-photo {
   display: flex;
+  padding: 40px;
+  margin: 0 auto;
+  max-height: 100%;
+}
+
+.nasa-photo img {
+  width: 50%;
+  margin-right: 50px;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+.nasa-photo h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nasa-photo .date {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.nasa-photo .explanation {
+  color: #bbb;
+}
+
+@media (max-width: 1280px) {
+  .nasa-photo {
+    display: block;
+  }
+
+  .nasa-photo img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
-.auto-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
+.home-link {
+  font-size: 40px;
+  background: #f59494;
+  display: inline-block;
+  padding: 40px 80px;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  text-transform: uppercase;
 }
 
-.logo {
-  /* background-image: url('./loc-logo.png'); */
-  height: 70px;
-  width: 200px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-input {
-  padding: 10px;
-  height: 20px;
-  width: 500px;
-  border: 1px solid purple;
-  margin: 10px;
-  font-size: 18px;
-  text-transform: capitalize;
-}
-
-.pos-rel {
-  position: relative;
-}
-
-.autoContainer {
-  position: absolute;
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
-  border-color: goldenrod;
-  background-color: whitesmoke;
-  right: 10px;
-  top: 52px;
-  width: 520px;
-}
-
-.option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 500px;
-  padding: 5px;
-}
-
-.option,
-span {
-  font-size: 28px;
-  text-transform: capitalize;
-}
-
-.flex-container {
-  display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
+.home-link:hover {
+  border-radius: 5px;
+  background: #e77171;
 }
